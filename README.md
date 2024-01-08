@@ -30,13 +30,13 @@ $ docker exec -it productstest-app-1 php artisan key:generate
 $ docker exec -it productstest-app-1 php artisan migrate
 ```
 
-### Чтобы заполнить БД заранее прописанными данными можно использовать seed
+### Чтобы заполнить БД заранее прописанными данными надо использовать seed
 ```bash
 $ docker exec -it productstest-app-1 php artisan DB:seed
 ```
 ### Открываем браузер и заходим http://localhost:8080/
-### login: admin@example.com
-### parol: password
+### Логин: admin@example.com
+### Парол: password
 
 ### Для проверки отправлений увидомлений измените в /config/product.php есть email поставте свою почту 
 ### И запустите команду для запустка Очереди
