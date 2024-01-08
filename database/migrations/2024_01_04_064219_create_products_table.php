@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
+            $table->string("article",255)->unique();
+            $table->string('name',255);
+            $table->enum("status",["available","unavailable"])->default("unavailable");
+            $table->jsonb("data")->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }
